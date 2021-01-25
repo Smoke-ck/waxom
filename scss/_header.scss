@@ -1,0 +1,289 @@
+.container {
+    max-width: 1170px;
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header {
+    height: 1024px;
+    background-image: url(../img/background/bg_photo_header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    &__mobile {
+        display: none;
+    }
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 40px;
+    }
+    &__logo {
+        font-family: Raleway;
+        font-size: 34px;
+        line-height: 1.2;
+        font-weight: 400;
+        letter-spacing: -0.04em;
+        color: #ffffff;
+        &::before {
+            content: url(../img/logo/logos_11279.png);
+            vertical-align: middle;
+        }
+    }
+    &__list {
+        display: flex;
+        padding-right: 10px;
+    }
+    &__link {  
+        &--click {
+            text-decoration: none;
+            font-family: Montserrat;
+            font-size: 14px;
+            line-height: 1.2;
+            font-weight: 300;
+            color: #ffffff;
+            margin-right: 28px;
+            &:hover {
+                color: $hover_color;
+            }
+        }
+        &:nth-child(8) {
+            margin-right: 63px;
+        }  
+        &--nomargin {
+            margin-right: 0;
+        }
+    }
+    &__description {
+        width: 589px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        &::before {
+            position:absolute;
+            content:url(../img/element/left_11970.png);
+            left:-480px;
+        }
+        &::after {
+            position:absolute;
+            content: url(../img/element/right_11969.png);
+            right: -480px;
+            top:0;
+        }
+    }
+    &__title {
+        font-family: Raleway;
+        font-size: 52px;
+        line-height: 1.2;
+        font-weight: 800;
+        color: #ffffff;
+        &--upper {
+            font-size: 36px;
+            font-weight: 500;
+        }
+        &--lower {
+            font-family: Montserrat;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 300;
+            margin-bottom: 52px;
+        }
+    }
+    &__button {
+        font-family: Raleway;
+        font-size: 14px;
+        line-height: 23px;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: #ffffff;
+        width: 170px;
+        height: 53px;
+        background-color: $button_color;
+        border-radius: 3px;
+        border: none;
+        cursor: pointer;
+    }
+}
+.slider .fotorama__wrap{
+margin-right: auto;
+margin-left:auto;
+width: 100% !important;
+min-height: 800px;
+position: relative;
+}
+.slider .fotorama__arr.fotorama__arr--prev{
+    background: url(../img/element/left_11970.png);
+    width: 40px;
+    height: 73px;
+    top:30%;
+
+}
+.slider .fotorama__arr.fotorama__arr--next {
+    width: 40px;
+    height: 73px;
+    background: url(../img/element/right_11969.png);
+    top:30%;
+}
+.slider .header__description {
+    padding-top: 280px;
+}
+.slider .fotorama__shadows {
+    display: none !important;
+}
+.slider .fotorama__stage::before {
+    display: none;
+}
+.slider .fotorama__stage::after {
+    display: none;
+}
+.slider .fotorama__nav__frame.fotorama__nav__frame--dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin-left: 10px;
+}
+.slider .fotorama__nav__frame.fotorama__nav__frame--dot.fotorama__active {
+    border: 2px solid #d3c1ad;
+    background-color: #2c2c2e;
+}
+.slider .fotorama__nav-wrap {
+    position: absolute;
+    top:700px;
+}
+
+.slider .fotorama__stage {
+    min-height: 700px;
+}
+.slider .fotorama__wrap--css3 .fotorama__arr:not(:focus), .fotorama__wrap--css3 .fotorama__fullscreen-icon:not(:focus), .fotorama__wrap--css3 .fotorama__video-close:not(:focus), .fotorama__wrap--css3 .fotorama__video-play:not(:focus){
+    transition-property: none;
+    transition-duration: none;
+}
+@media(max-width:1169px) {
+    .header{
+        height: 900px;
+        &__logo {
+            position: relative;
+            padding-left: 10px;
+            &::before {
+            padding-left: 20px;
+            }
+        }
+        &__list {
+            flex-wrap: wrap;
+            height: 50px;
+        }
+        &__container {
+            position: relative;
+        }
+        &__description {
+            min-height: 500px;
+        }
+    }
+    .slider .header__description {
+        padding-top: 200px;
+    }
+    .slider .fotorama__arr.fotorama__arr--prev{
+        display: none !important;
+    }
+    .slider .fotorama__arr.fotorama__arr--next {
+        display:none !important;
+    }
+}
+@media (max-width:767px) {
+    .header {
+        height: 700px;
+        &__top{
+            justify-content: space-around;
+        }
+        &__nav {
+            display: none;
+        }
+        &__mobile {
+            display: block;
+        }
+        &__mobile-tittle {
+            text-decoration: none;
+            font-family: Montserrat;
+            text-transform: uppercase;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 300;
+            color: #ffffff;
+            &:hover {
+                color: $hover_color;
+            }
+        }
+        &__mobile-link {
+            position: relative;
+        }
+        &__mobile-downlist {
+            position: absolute;
+            top:0;
+            padding-top: 20px;
+            display:none;
+        }
+        &__mobile-link:active> &__mobile-downlist,
+        &__mobile-downlist:hover {
+            display:block;
+            z-index: 2;
+        }
+        &__logo {
+            font-size: 20px;
+            margin-right: 20px;
+            &::before {
+                display: none;
+            }
+        }
+        &__description {
+            width: 300px;
+        }
+        &__link {  
+            &--click {
+                font-size: 8px;
+                line-height: 0.05;
+                font-weight: 300;
+                margin-right: 10px;
+            }
+            &:nth-child(8) {
+                margin-right: 20px;
+            }  
+            &--nomargin {
+                margin-right: 0;
+            }
+        }
+        &__title {
+            font-size: 30px;
+            line-height: 1.2;
+            font-weight: 800;
+            &--upper {
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            &--lower {
+                    font-size: 12px;
+                    line-height: 16px;
+                    font-weight: 300;
+                    margin-bottom: 20px;
+                }
+            }
+        &__button {
+            font-size: 12px;
+            line-height: 20px;
+            font-weight: 500;
+            width: 100px;
+            height: 40px;
+        }
+    }
+    .slider .header__description {
+        padding-top: 150px;
+    }
+    .slider .fotorama__nav-wrap {
+        top:500px;
+    }
+}
+

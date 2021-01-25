@@ -1,0 +1,15 @@
+.brends {
+    background-image: url(../img/brends/bg_photo_11122.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 140px 10px;
+    &__container {
+        display:grid;
+        align-items: center;
+        justify-items:center;
+        grid-template-columns: repeat(auto-fill,minmax(210px,1fr));;
+        grid-column-gap:90px;
+        grid-row-gap: 40px;
+    } 
+}

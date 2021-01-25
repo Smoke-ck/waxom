@@ -1,0 +1,116 @@
+.mobile {
+    background-color: #fbfaf8;
+    padding-top: 79px;
+    &__container {
+        display: flex;
+        padding: 0 20px 0 20px;
+    }
+    &__phone {
+        height: 616px;
+        object-fit: contain;
+    }
+    &__tittle {
+        padding-top: 115px;
+        margin-bottom: 30px;
+        font-family: Raleway;
+        font-size: 30px;
+        line-height: 1.2;
+        font-weight: 600;
+        color: $tittle_color
+    }
+    &__description {
+        font-family: Montserrat;
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: 300;
+        color: $description_color;
+        margin-bottom: 35px;
+    }
+    &__details-link {
+        text-decoration: none;
+        font-family: Montserrat;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 500;
+        color: $description_color;
+        margin: 10px 0;
+        &:hover {
+            color:$hover_color;
+        }
+    }
+    &__summary {
+        text-decoration: none;
+        font-family: Montserrat;
+        font-size: 16px;
+        line-height: 32px;
+        font-weight: 300;
+        color: $description_color;
+        position: relative;
+        cursor: pointer;
+        outline: 0;
+        &::-webkit-details-marker { display: none; }
+        &::-moz-list-bullet { list-style-type: none; }
+        &::before {
+            content: url(../img/mobile/01_10972.jpg);
+            position: absolute;
+            top:3px;
+            left:-40px;
+        }
+    }
+    &__details{
+       padding-left: 100px;
+        &[open] {
+            summary {
+            &:before {
+                transform: rotate(90deg);
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                }
+            }
+        }
+    }
+}
+@media(max-width:1169px) {
+    .mobile{
+        &__container {
+            flex-direction: column;
+        }
+        &__tittle {
+            padding-top: 20px;
+        }
+        &__content-media {
+            text-align: center;
+        }
+    }
+}
+@media(max-width:767px) {
+    .mobile {
+        padding-top:30px;
+        &__phone {
+            height: 200px;
+        }
+        &__tittle{
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        &__description {
+            font-size: 12px;
+            line-height: 20px;
+            margin-bottom: 10px;
+        }
+        &__details-link{
+            font-size: 12px;
+            line-height: 20px;
+        }
+        &__details{
+            padding-left: 30px;
+        }
+        &__summary {
+            font-size: 14px;
+            line-height: 25px;
+        }
+        &__details-link {
+            padding-left: 20px;
+        }
+    }
+}

@@ -1,0 +1,124 @@
+.posts {
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(370px,1fr));;
+        grid-column-gap: 30px;
+    }
+    &__header {
+        max-width: 760px;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 82px;
+    }
+    &__tittle {
+        font-family: Raleway;
+        font-size: 30px;
+        line-height: 1.2;
+        font-weight: 600;
+        color:$tittle_color;
+        margin-bottom: 25px;
+    }
+    &__description {
+        font-family: Montserrat;
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: 300;
+        color: $description_color;
+        margin-bottom: 35px;
+    }
+    &__card {
+        position: relative;
+        padding-bottom: 33px;
+        &:hover{
+            background-color: #362f2d;
+            transition: 0.5s;
+        }
+    }
+    &__card:hover &__card-tittle {
+        color: $hover_color;
+    }
+    &__card:hover &__card-description  {
+        color: #ffffff;
+        &--footer {
+            color: #c7b299;
+        }
+    }
+    &__card:hover &__card-number {
+        background-color: #c7b299;
+        &--month {
+            background-color: #a48d72;
+        }
+    }
+    &__card-info {
+        padding-left: 29px;
+    }
+    &__card-tittle {
+        font-family: Raleway;
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 500;
+        color: $tittle_color;
+        margin-bottom: 19px;
+    }
+    &__card-description {
+        font-family: Montserrat;
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 300;
+        color: $description_color;
+        margin-bottom: 27px;
+        &--footer {
+            color: $hover_color;
+            position: relative;
+            text-decoration: none;
+            &::after {
+                content: '';
+                border-style: solid;
+                border-width: 4px 0 4px 5px;
+                border-color: transparent transparent transparent $hover_color;
+                position: absolute;
+                top:7px;
+                left:85px;
+            }
+        }
+    }
+    &__card-background {
+        margin-bottom: 30px;
+        object-fit: cover;
+        width: 100%;
+    }
+    &__card-date {
+        position: absolute;
+        top:29px;
+        left:20px;
+    }
+    &__card-number {
+        background-color: #363636;
+        border-radius: 3px 3px 0px 0px;
+        width: 50px;
+        height: 35px;
+        font-family: Montserrat;
+        font-size: 24px;
+        line-height: 20px;
+        font-weight: 300;
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &--month {
+            height: 25px;
+            background-color: #252525;
+            border-radius: 0px 0px 3px 3px;
+            font-family: Roboto;
+            font-size: 12px;
+            font-weight: 400;
+        }
+    }
+}
+@media(max-width:767px) {
+    .posts {
+        &__cards {
+            grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
+        }
+    }
+}

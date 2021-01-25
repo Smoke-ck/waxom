@@ -1,0 +1,82 @@
+.table {
+    background-color: #f4f5f8;
+    background-image: linear-gradient(90.0deg, #211b19 0%, #4e3427 100%);
+    padding: 65px 100px 60px 100px;
+    &__container {
+        display:grid;
+        grid-template-columns: repeat(auto-fill,minmax(190px,1fr));
+        grid-column-gap: 40px;
+    }
+    &__cards {
+        padding-top: 30px;
+        height: 180px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        &::before {
+            content: '\f007';
+            font-family: 'Font Awesome 5 Free';
+            font-size: 44px;
+            color:$hover_color;
+            position: absolute;
+            top:0px;
+        }
+        &::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 2px;
+            background-color:#f1eee9;
+            position:absolute;
+            bottom:0;
+            left:50%;
+            transform: translate(-50%);
+        }
+        &--coffe {
+            &::before {
+                content:'\f7b6';
+                font-weight: 600;
+            }
+        }
+        &--comments {
+            &::before {
+                content: '\f4ad';
+            }
+        }
+        &--heart {
+            &::before {
+                content: '\f004';
+            }
+        }
+        &--launche {
+            &::before {
+                content:'\f805';
+                font-weight: 600;
+            }
+        }
+    }
+    &__tittle {
+        font-family: Montserrat;
+        font-size: 48px;
+        line-height: 36px;
+        font-weight: 200;
+        color: #ffffff;
+        margin-bottom:20px;
+    }
+    &__description {
+        font-family: Montserrat;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: #c7b299;
+    }
+}
+@media(max-width:767px){
+    .table {
+        padding: 35px 60px 30px 60px;
+    }
+}

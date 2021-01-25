@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    min-width: 320px;
+}
+$hover_color:#c7b299;
+$button_color:#998675;
+$tittle_color:#555555;
+$description_color: #8c8c8c;
+@import "fonts";
+@import "header";
+@import "settings";
+@import "ideas";
+@import "projects";
+@import "presentation";
+@import "mobile";
+@import "table";
+@import "posts";
+@import "brends";
+@import "info";
+@import "footer";

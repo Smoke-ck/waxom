@@ -1,0 +1,97 @@
+.info {
+    background-color: #191919;
+    &__container {
+        display:grid;
+        grid-template-columns: repeat(auto-fill,minmax(270px,1fr));
+        grid-column-gap: 30px;
+    }
+    &__card {
+        padding: 94px 0 100px 0;
+    }
+    &__card-tittle{
+        font-family: Raleway;
+        font-size: 24px;
+        line-height: 1.2;
+        font-weight: 400;
+        letter-spacing: -0.04em;
+        color: #ffffff;
+        margin-bottom: 29px;
+        padding-top: 20px;
+        &--logo {
+            padding-top: 0;
+            font-size: 34px;
+            &::before {
+                content: url(../img/logo/logos_11279.png);
+                vertical-align: middle;
+            }
+        }
+    }
+    &__card-description{
+        font-family: Montserrat;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 300;
+        color: $tittle_color;
+        margin-bottom: 33px;
+        &:hover {
+            color:$hover_color;
+        }
+        &--footer {
+            font-weight: 400;
+            color: #d1d1d1;
+            position: relative;
+            &::after {
+                content: '';
+                border-style: solid;
+                border-width: 4px 0 4px 5px;
+                border-color: transparent transparent transparent #d1d1d1;
+                position: absolute;
+                top:8px;
+                left:85px;
+            }
+        }
+        &--date {
+            margin-bottom:0;
+        }
+        &--nickname {
+            color: #00bff3;
+        }
+        &--link {
+            text-decoration: none;
+            color: $tittle_color;
+        }
+    }
+    &__card-secondary-tittle {
+        font-family: Montserrat;
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: 300;
+        color: #363636;
+    }
+    &__card-date {
+            padding: 14px 0 14px 0;
+            border-bottom: 2px solid #252525;
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+    &__card-date:hover &__card-secondary-tittle {
+        color: #ffffff;
+    }
+    &__card-date:hover &__card-description {
+            color: $hover_color;
+            &--nickname {
+                color: #00bff3;
+            }
+    }
+}
+@media(max-width:1169px) {
+    .info {
+        &__container {
+            grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
+        }
+        &__card {
+            padding:5px 20px;
+        }
+    }
+}

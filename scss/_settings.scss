@@ -1,0 +1,93 @@
+.settings{
+    &__container {
+        padding-bottom: 100px;
+        display: grid;
+      /*  grid-template-columns:repeat(auto-fill,minmax(270px, 1fr));*/
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-column-gap:20px;
+    }
+    &__card {
+        height: 266px;
+        text-align: center;
+        position: relative;
+        padding-top: 148px;
+    }
+    &__link {
+        text-decoration: none;
+        color: $tittle_color;
+    }
+    &__tittle {
+        margin-bottom: 15px;
+    }
+    &__link {
+        
+        font-family: Raleway;
+        font-size: 22px;
+        line-height: 1.2;
+        font-weight: 600;
+        color: $tittle_color;
+        &::before {
+            position:absolute;
+            top:60px;
+            left:50%;
+            transform:translate(-50%);
+            content: '\f5ad';
+            font-family: 'Font Awesome 5 Free';
+            font-size: 49px;
+        }
+        &::after {
+            content:'';
+            display: block;
+            width: 70px;
+            height: 3px;
+            background-color:#f1eee9;
+            position:absolute;
+            bottom: -35px;
+            left:50%;
+            transform: translate(-50%);
+        }
+        &:hover::after {
+            background-color: $hover_color;
+        }
+        &:hover {
+            color:$hover_color;
+        }
+        &--development {
+            &::before {
+                content: '\f5fd';
+            }
+        }
+        &--customization {
+            &::before {
+                content: '\f013';
+            }
+        }
+        &--marketing {
+            &::before {
+                content: '\f0b1';
+            }
+        }
+    }
+    &__description {
+        font-family: Montserrat;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 300;
+        color:$description_color;
+        padding-bottom: 30px;
+    }
+}
+@media(max-width:1169px) {
+ .settings {
+     &__container {
+         grid-template-columns:1fr 1fr;
+     }
+ }
+}
+@media(max-width:767px){
+    .settings {
+        &__container {
+            grid-template-columns:repeat(auto-fill,minmax(250px, 1fr));
+        }
+    }
+ }
